@@ -631,7 +631,7 @@ Working on new Css by taleev
 */
 #loginScreen {
 	-fx-background-image: url('/images/LoginBackGround.png');
-	-fx-background-size: 30%;
+	-fx-background-size: 20%;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
 }

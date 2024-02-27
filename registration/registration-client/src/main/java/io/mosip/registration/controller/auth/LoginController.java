@@ -3,7 +3,7 @@ package io.mosip.registration.controller.auth;
 import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
 import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
-import java.awt.Desktop;
+import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -180,6 +180,9 @@ public class LoginController extends BaseController implements Initializable {
 
 	@FXML
 	private ImageView irisImageView;
+
+	@FXML
+	private AnchorPane headingPane;
 
 	@Autowired
 	private LoginService loginService;
@@ -510,6 +513,16 @@ public class LoginController extends BaseController implements Initializable {
 							RegistrationUIConstants.getMessageLanguageSpecific(exception.getMessage().substring(0, 3)
 							+ RegistrationConstants.UNDER_SCORE + RegistrationConstants.MESSAGE.toUpperCase()));
 		}
+	}
+
+	@FXML
+	private void moveToTop(){
+
+		Label label = (Label) headingPane.getChildren().get(0);
+
+		AnchorPane.setTopAnchor(label, 0.0);
+		AnchorPane.setBottomAnchor(label,null);
+
 	}
 
 	/**
